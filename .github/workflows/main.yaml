@@ -1,0 +1,13 @@
+name: Ephemeral Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [self-hosted, linux, ephemeral]
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo "Running on ephemeral runner jou"
+          hostname
